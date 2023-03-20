@@ -54,8 +54,6 @@ public class SingUpTest extends BaseTest {
                 .map(el -> el.getAttribute("textContent"))
                 .collect(Collectors.toList());
 
-        Req.forEach(System.out::println);
-
         Assert.assertEquals("The Email field is required.",Req.get(0));
         Assert.assertEquals("The Password field is required.",Req.get(1));
         Assert.assertEquals("The Password field is required.",Req.get(2));
